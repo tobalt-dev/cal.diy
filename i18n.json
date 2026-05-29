@@ -14,8 +14,8 @@
       "el",
       "es",
       "es-419",
-      "eu",
       "et",
+      "eu",
       "fi",
       "fr",
       "he",
@@ -24,11 +24,12 @@
       "ja",
       "km",
       "ko",
+      "lt",
       "nl",
       "no",
       "pl",
-      "pt-BR",
       "pt",
+      "pt-BR",
       "ro",
       "ru",
       "sk-SK",
@@ -43,7 +44,9 @@
   },
   "buckets": {
     "json": {
-      "include": ["packages/i18n/locales/[locale]/common.json"]
+      "include": [
+        "packages/i18n/locales/[locale]/common.json"
+      ]
     }
   },
   "$schema": "https://lingo.dev/schema/i18n.json"
