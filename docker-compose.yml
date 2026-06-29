@@ -11,6 +11,7 @@ networks:
 
 services:
   database:
+    mem_limit: 512m
     container_name: database
     image: postgres
     restart: always
@@ -24,6 +25,7 @@ services:
       - stack
 
   redis:
+    mem_limit: 256m
     container_name: redis
     image: redis:latest
     restart: always
@@ -35,6 +37,7 @@ services:
       - "${REDIS_PORT:-6379}:6379"
 
   calcom:
+    mem_limit: 768m
     image: calcom.docker.scarf.sh/calcom/cal.diy
     build:
       context: .
@@ -119,6 +122,7 @@ services:
 
   # Optional use of Prisma Studio. In production, comment out or remove the section below to prevent unwanted access to your database.
   studio:
+    mem_limit: 384m
     image: calcom.docker.scarf.sh/calcom/cal.diy
     restart: always
     networks:
